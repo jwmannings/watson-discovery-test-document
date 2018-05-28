@@ -1,3 +1,9 @@
+
+docs/LL_UniversalMesh.pdf
+docs/LL_VEMOSLA.pdf
+json/jsonLL_UniversalMesh.pdf.json
+json/jsonLL_VEMOSLA.pdf.json
+config.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
