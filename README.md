@@ -2,7 +2,7 @@
 ## Overview
 This is a simple script to upload and check documents against a Watson Discovery collection. This will check the documents, upload them, find them in the collection and then save the html/json output returned from the processing. This enables you to assess the document without having to use the online viewer.
 
-Development note 28/5/18: viewer.py file added, this has been updated to work with this application. Full credit to [Ashwin Nanjappa]https://github.com/ashwin) for the original code.
+Development note 28/5/18: viewer.py file added, this has been updated to work with this application. Full credit to [Ashwin Nanjappa](https://github.com/ashwin) for the original code.
 
 Note: documents have been excluded in the demo besides from standard documents taken from freely avaliable resources (listed below).
 
