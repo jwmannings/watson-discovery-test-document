@@ -2,9 +2,9 @@
 ## Overview
 This is a simple script to upload and check documents against a Watson Discovery collection. This will check the documents, upload them, find them in the collection and then save the html/json output returned from the processing. This enables you to assess the document without having to use the online viewer.
 
-Development note 28/5/18: json_viewer.py file added, this is currently being updated to work with this application. Full credit to [AtsushiSakai](https://github.com/AtsushiSakai/PyJSONViewer) for the original code.
+Development note 28/5/18: viewer.py file added, this has been updated to work with this application. Full credit to [Ashwin Nanjappa]https://github.com/ashwin) for the original code.
 
-Note: documents have been excluded in the demo besides from standard documents taken from the internet.
+Note: documents have been excluded in the demo besides from standard documents taken from freely avaliable resources (listed below).
 
 ## Set up environment
 Firstly a file named 'config.py' will need to be created in the main file. This is important as it holds all of the parameters of the API.
@@ -32,18 +32,30 @@ Enter the environment:
 note: where <username> is your local computer username.
 
 ## Needed environmental variables
-conda install requests
-pip install --upgrade "watson-developer-cloud>=1.3.0"
-pip install jsonWidget
-pip install ipykernal
+Install the following within the anaconda virtual environment:
+    conda install requests
+    pip install --upgrade "watson-developer-cloud>=1.3.0"
+    pip install jsonWidget
+    pip install ipykernal
+    pip install PyQt5
+
+Note: PyQt5 is for the json viewer.
+
 
 ## Instructions for running
 To run the script:
-    python main.py
-    python main.py upload
-    python main.py json
+    python main.py        (runs both the upload and json transform)
+    python main.py upload     (runs just the upload of documents)
+    python main.py json     (runs just the json transform of documents)
 
-To edit access details modify the config.py file where the API keys and user access is stored.
+It is recommended to run the 'upload' script first, wait until all documents are processed (check the visual Discovery tooling) and then run the 'json' script when complete.
+
+To edit access details modify the 'config.py' file where the API keys and user access is stored.
+
+To run the viewer (located in the json folder) run:
+    python viewer.py <documentname>
+
+To use the viewer, you can visually click through it all alternatively search for categories in the top bar.
 
 ## Constraints
 - This script is only designed to ingest and upload PDF and HTML documents, all other documents in the target directory will be ignored.
