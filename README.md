@@ -33,27 +33,28 @@ note: where <username> is your local computer username.
 
 ## Needed environmental variables
 Install the following within the anaconda virtual environment:
-    conda install requests
-    pip install --upgrade "watson-developer-cloud>=1.3.0"
-    pip install jsonWidget
-    pip install ipykernal
-    pip install PyQt5
+
+      conda install requests
+      pip install --upgrade "watson-developer-cloud>=1.3.0"
+      pip install jsonWidget
+      pip install ipykernal
+      pip install PyQt5
 
 Note: PyQt5 is for the json viewer.
 
 
 ## Instructions for running
 To run the script:
-    python main.py        (runs both the upload and json transform)
-    python main.py upload     (runs just the upload of documents)
-    python main.py json     (runs just the json transform of documents)
+- python main.py        (runs both the upload and json transform)
+- python main.py upload     (runs just the upload of documents)
+- python main.py json     (runs just the json transform of documents)
 
 It is recommended to run the 'upload' script first, wait until all documents are processed (check the visual Discovery tooling) and then run the 'json' script when complete.
 
 To edit access details modify the 'config.py' file where the API keys and user access is stored.
 
 To run the viewer (located in the json folder) run:
-    python viewer.py <documentname>
+- python viewer.py <documentname>
 
 To use the viewer, you can visually click through it all alternatively search for categories in the top bar.
 
